@@ -18,7 +18,7 @@ const Products = () => {
         Add new Product
       </Link>
 
-      <table className="basic mt-4">
+      <table className="basic mt-6">
         <thead>
           <tr>
             <td>Product name</td>
@@ -29,8 +29,11 @@ const Products = () => {
           {products.map((product, id) => (
             <tr key={id}>
               <td>{product.title}</td>
-              <td>
-                <Link href={"/products/edit/" + product._id}>
+              <td className="flex gap-1">
+                <Link
+                  href={"/products/edit/" + product._id}
+                  className="btn-default"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -47,7 +50,10 @@ const Products = () => {
                   </svg>
                   Edit
                 </Link>
-                <Link href={"/products/delete/" + product._id}>
+                <Link
+                  href={"/products/delete/" + product._id}
+                  className="btn-red"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"

@@ -6,7 +6,7 @@ const Home = () => {
   const { data: session } = useSession();
   console.log({ session });
 
-  if (!session) return;
+  if (!session) return <Layout />;
   return (
     <Layout>
       <div className="text-blue-900 flex justify-between">
